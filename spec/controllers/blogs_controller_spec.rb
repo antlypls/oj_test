@@ -3,7 +3,9 @@ require 'rails_helper'
 RSpec.describe BlogsController do
   context 'JSON request' do
     describe 'GET index' do
-      let!(:blog) { create(:blog) }
+      let(:post) { create(:post) }
+      let!(:blog) { post.blog }
+
       subject { get :index, format: :json }
 
       it 'returns ok' do
@@ -17,6 +19,7 @@ RSpec.describe BlogsController do
 
         expect(result).to be_an(Array)
         expect(result.first['title']).to eq(blog.title)
+        expect(result.first['posts']).not_to be_empty
       end
     end
   end

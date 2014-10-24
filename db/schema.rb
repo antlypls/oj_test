@@ -11,12 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024182058) do
+ActiveRecord::Schema.define(version: 20141024191837) do
 
   create_table "blogs", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.text     "text"
+    t.integer  "blog_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "posts", ["blog_id"], name: "index_posts_on_blog_id"
 
 end
