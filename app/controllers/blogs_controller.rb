@@ -5,12 +5,12 @@ class BlogsController < ApplicationController
   # GET /blogs
   def index
     @blogs = Blog.all
-    respond_with @blogs
+    respond_with @blogs.decorate
   end
 
   # GET /blogs/1
   def show
-    respond_with @blog
+    respond_with @blog.decorate
   end
 
   # GET /blogs/new

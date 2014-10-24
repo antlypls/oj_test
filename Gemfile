@@ -8,6 +8,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'active_model_serializers', '~> 0.8.2'
+gem 'draper', '~> 1.3'
 
 gem 'oj'
 gem 'oj_mimic_json'

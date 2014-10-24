@@ -11,6 +11,8 @@ RSpec.describe BlogsController do
       end
 
       it 'returns valid JSON' do
+        puts subject.body
+
         result = JSON.parse(subject.body)
 
         expect(result).to be_an(Array)
