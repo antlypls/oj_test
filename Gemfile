@@ -9,6 +9,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'active_model_serializers', '~> 0.8.2'
 
+gem 'oj'
+gem 'oj_mimic_json'
+
 group :development do
   gem 'spring'
 end
