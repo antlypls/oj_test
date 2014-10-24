@@ -12,3 +12,13 @@ gem 'jbuilder', '~> 2.0'
 group :development do
   gem 'spring'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'faker'
+  gem 'database_cleaner'
+end
